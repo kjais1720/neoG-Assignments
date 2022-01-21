@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Luxurious+Roman&family=Roboto&family=Raleway:wght@600&display=swap');
+@import url(./card-variants.css);
+
+*,*::after, *::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a{
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.tr-card{
+    --radius:.3em;
+    --primary-color:#008080;
+    --secondary-color:#0f1657;
+}
+
+body{
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    background-color: wheat;
+}
+
+.tr-card{
+    font-family: 'Roboto', serif;
+    padding: 1.25em;
+    border-radius: var(--radius);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 18.75em;
+    position: relative;
+    box-shadow: inset .0em .0em .3em rgba(0,0,0,0.2), inset .0em .0em .62em rgba(0,0,0,0.2), .0em .0em 1.25em rgba(0,0,0,0.4);
+    font-size: 1rem;
+}
+
+.tr-card-banner img{
+    width: 100%;
+    border-radius: var(--radius) ;
+}
+
+.tr-card-header h2{
+    font-size: 1.5em;
+    color: var(--primary-color);
+}
+
+.tr-card-header h3{
+    color: gray;
+    font-size: 0.9em;
+}
+
+.tr-card-body p{
+    font-size: 0.9em;
+    color: gray;
+}
+
+.tr-card-badge{
+    position: absolute;
+    font-size: .9em;
+    top: 1.0em;
+    right: -.625em;
+    padding: 0.5em 1.5em;
+    background-color: var(--secondary-color) ;
+    color: #fff;
+}
+
+.tr-card-badge::after{
+    border-top: .4em solid var(--secondary-color);
+    border-left: .4em solid var(--secondary-color);
+    border-right: .4em solid transparent;
+    border-bottom: .4em solid transparent;
+    bottom: -.7em;
+    content:"";
+    height: 0;
+    position: absolute;
+    right: -1px;
+    width: 0;
+    z-index: -1;
+}
+
+.tr-card-footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.tr-card-footer >*{
+    display: flex;
+    gap: 20px;
+}
+
+.tr-card-footer-links a{
+    color: var(--secondary-color);
+    font-weight: 500;
+    padding: .37em;
+    border-radius: var(--radius);
+    font-size: 0.9em;
+    border: none;
+}
+
+.tr-card-footer-buttons button{
+    background-color: transparent;
+    font-size: 1.1em;
+    border: none;
+}
+
+.tr-card-footer-buttons button:hover{
+    background-color: var(--primary-color);
+}
+
+.tr-card-footer-buttons button:first-child{
+    filter: drop-shadow(0px 0px 5px 2px rgba(0,0,0,0.2));
+    text-shadow: 0px 0px 5px 2px rgba(0,0,0,0.8);
+}
+
+.tr-card-footer-links a, .tr-card-footer-buttons button{
+    color: var(--secondary-color);
+}
+
+.tr-card-footer-links a:hover, .tr-card-footer-buttons button:hover {
+    background-color: hsla(180, 100%, 25%,0.2);
+    color: var(--secondary-color);
+    backdrop-filter: blur(3.0em);
+}
+
+.tr-card-footer-links a:focus, .tr-card-footer-buttons button:focus{
+    background-color: hsla(180, 100%, 25%,0.4);
+    color: var(--tr-primary);
+}
+
+/******** Header over media Card *********/
+
+
+.tr-card-header-over .tr-card-banner{
+    position: relative;
+}
+
+.tr-card-header-over .tr-card-banner::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient( transparent 20%, var(--secondary-color) );
+    border-radius: 0 0 var(--radius) var(--radius);
+}
+
+.tr-card-header-over .tr-card-header{
+    padding: 0.62em;
+    position: absolute;
+    top: 40%;
+}
+
+/******** Header before media Card *********/
+
+.tr-card-header-first .tr-card-header{
+    order: -1;
+}
+
+.tr-card-header-first .tr-card-badge{
+    top: -2%;
+}
+
+/******** only links *********/
+
+.tr-card-only-links .tr-card-footer{
+    justify-content:center;
+}
+
+.tr-card-only-links .tr-card-footer-links{
+    width: 100%;
+}
+
+.tr-card-only-links .tr-card-footer-links a{
+    flex: 1;
+    text-align: center;
+    /* box-shadow: var(--tr-box-shadow); */
+    background-color: hsla(180, 100%, 25%,0.2);
+}
+
+.tr-card-only-links .tr-card-footer-buttons{
+    display: none;
+}
+
