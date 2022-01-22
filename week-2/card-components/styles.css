@@ -21,18 +21,24 @@ a{
 body{
     min-height: 100vh;
     display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(18.75em, 1fr));
+    align-items: center;
+    justify-items: center;
+    gap: 1.25rem;
     place-content: center;
     background-color: wheat;
+    padding: 5vw;
 }
 
 .tr-card{
+    align-self: center;
     font-family: 'Roboto', serif;
     padding: 1.25em;
     border-radius: var(--radius);
     background-color: white;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 0.625em;
     max-width: 18.75em;
     position: relative;
     box-shadow: inset .0em .0em .3em rgba(0,0,0,0.2), inset .0em .0em .62em rgba(0,0,0,0.2), .0em .0em 1.25em rgba(0,0,0,0.4);
@@ -55,7 +61,7 @@ body{
 }
 
 .tr-card-body p{
-    font-size: 0.9em;
+    font-size: .9em;
     color: gray;
 }
 
@@ -90,7 +96,7 @@ body{
 
 .tr-card-footer >*{
     display: flex;
-    gap: 20px;
+    gap: 1.25em;
 }
 
 .tr-card-footer-links a{
@@ -112,11 +118,6 @@ body{
     background-color: var(--primary-color);
 }
 
-.tr-card-footer-buttons button:first-child{
-    filter: drop-shadow(0px 0px 5px 2px rgba(0,0,0,0.2));
-    text-shadow: 0px 0px 5px 2px rgba(0,0,0,0.8);
-}
-
 .tr-card-footer-links a, .tr-card-footer-buttons button{
     color: var(--secondary-color);
 }
@@ -132,11 +133,16 @@ body{
     color: var(--tr-primary);
 }
 
+.tr-card-footer-buttons button::after{
+
+}
+
 /******** Header over media Card *********/
 
 
 .tr-card-header-over .tr-card-banner{
     position: relative;
+    order: -1;
 }
 
 .tr-card-header-over .tr-card-banner::before{
@@ -150,8 +156,9 @@ body{
 
 .tr-card-header-over .tr-card-header{
     padding: 0.62em;
-    position: absolute;
-    top: 40%;
+    margin-top: -4.5em;
+    position: relative;
+    z-index: 2;
 }
 
 /******** Header before media Card *********/
@@ -185,3 +192,42 @@ body{
     display: none;
 }
 
+
+/********** Horizontal card *************/
+
+.tr-card-hor{
+    flex-flow: row wrap;
+    max-width: 20em;
+    padding: 0.625em;
+}
+
+.tr-card-hor .tr-card-banner{
+    width: 7.8em;
+}
+
+.tr-card-hor .tr-card-header{
+    align-self: center;
+}
+
+.tr-card-hor .tr-card-badge{
+    top: -11%;
+}
+
+.tr-card-hor .tr-card-body{
+    display: none;
+}
+
+.tr-card-hor .tr-card-footer{
+    flex-grow: 1;
+}
+
+
+/********** Only Icons *************/
+
+.tr-card-only-icons .tr-card-footer{
+    justify-content: flex-end;
+}
+
+.tr-card-only-icons .tr-card-footer-links{
+    display: none;
+}
