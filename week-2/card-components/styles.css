@@ -16,6 +16,8 @@ a{
     --radius:.3em;
     --primary-color:#008080;
     --secondary-color:#0f1657;
+    --bg-light:hsla(180, 100%, 25%,0.2);
+    --bg-dark: hsla(180, 100%, 25%,0.4);
 }
 
 body{
@@ -108,6 +110,10 @@ body{
     border: none;
 }
 
+.tr-card-footer-buttons{
+    gap: 1.5em;
+}
+
 .tr-card-footer-buttons button{
     background-color: transparent;
     font-size: 1.1em;
@@ -120,22 +126,53 @@ body{
 
 .tr-card-footer-links a, .tr-card-footer-buttons button{
     color: var(--secondary-color);
+    position: relative;
+    background-color: transparent;
+    z-index: 2;
 }
 
-.tr-card-footer-links a:hover, .tr-card-footer-buttons button:hover {
-    background-color: hsla(180, 100%, 25%,0.2);
+.tr-card-footer-links a:hover{
+    background-color: var(--bg-light);
     color: var(--secondary-color);
     backdrop-filter: blur(3.0em);
 }
 
-.tr-card-footer-links a:focus, .tr-card-footer-buttons button:focus{
-    background-color: hsla(180, 100%, 25%,0.4);
+.tr-card-footer-links a:focus{
+    background-color: var(--bg-dark);
     color: var(--tr-primary);
 }
 
-.tr-card-footer-buttons button::after{
-
+.tr-card-footer-buttons button:hover{
+    background-color: transparent;
 }
+
+.tr-card-footer-buttons button:focus{
+    transform: scale(1);
+    outline: none;
+}
+.tr-card-footer-buttons button::after{
+    height: 1.8em;
+    width: 1.8em;
+    content: '';
+    position: absolute;
+    background-color: var(--bg-light);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    z-index: -1;
+    transition: all ease 0.3s;
+}
+
+.tr-card-footer-buttons button:hover::after{
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.tr-card-footer-buttons button:focus::after{
+    transform: translate(-50%, -50%) scale(1);
+    background-color: var(--bg-dark) ;
+}
+
 
 /******** Header over media Card *********/
 
@@ -184,8 +221,7 @@ body{
 .tr-card-only-links .tr-card-footer-links a{
     flex: 1;
     text-align: center;
-    /* box-shadow: var(--tr-box-shadow); */
-    background-color: hsla(180, 100%, 25%,0.2);
+    background-color: var(--bg-light);
 }
 
 .tr-card-only-links .tr-card-footer-buttons{

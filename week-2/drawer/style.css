@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Luxurious+Roman&family=Roboto&family=Raleway:wght@600&display=swap');
+@import url(./card-variants.css);
+
+*,*::after, *::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a, button{
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+
+h2{
+
+}
+
+body{
+    --radius:.3em;
+    --primary-color:#008080;
+    --secondary-color:#0f1657;
+    max-width: 95vw;
+    min-height: 100vh;
+    font-size: 1rem;
+    display: flex;
+}
