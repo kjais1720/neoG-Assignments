@@ -1,0 +1,59 @@
+.tr-chips-input-wrapper{
+    border: solid 1px #0f1657;
+    width: fit-content;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex-wrap: wrap;
+    max-width: 400px;
+    width: 90%;
+    padding: 10px;
+    display: flex;
+    gap: 5px;
+}
+
+.tr-chips-input-wrapper >*{
+    border: none;
+    border-radius: inherit ;
+}
+
+
+.tr-chip-wrapper{
+    padding: 10px;
+    border-radius: inherit;
+    background-color: hsla(180, 100%, 25%,0.2);
+    display: flex;
+    gap: 5px;
+    border: solid 1px transparent;
+}
+
+.tr-chip-wrapper:hover{
+    background-color: hsla(180, 100%, 25%,0.4);
+}
+
+.tr-chip-wrapper:focus{
+    outline: none;
+    border: solid 1px #0f1657;
+}
+
+.tr-chip-wrapper .close-icon{
+    cursor: pointer;
+    font-weight: 900;
+}
+
+.tr-chips-input-wrapper input{
+    outline: none;
+    padding: 10px;
+    border-left: solid 2px transparent;
+    border-bottom: solid 2px transparent;
+    border-right: solid 2px transparent;
+    border-radius: 10px;
+    /* flex: 1 1 5%; */
+    flex-shrink: 1;
+}
+
+.tr-chips-input-wrapper input:focus{
+    border-bottom-color: #0f1657;
+}
