@@ -4,90 +4,277 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drawers
-        
-    </title>
+    <title>Drawers</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <aside class="tr-drawer">
+    <div class="container">
+        <aside id="sidebar1" class="tr-drawer">
+            <div class="tr-drawer-header">
+                <h2 class="tr-drawer-heading">Mail</h2>
+                <h3>email@jaiswal.io</h3>
+            </div>
+            <div class="tr-drawer-content">
+                <ul class="tr-stacked-links">
+                    <a href="#" class="tr-btn tr-icon-label-btn">
+                        <i class="fas fa-inbox"></i>
+                        <label> Inbox</label>
+                    </a>
+                    <a href="#" class="tr-btn tr-icon-label-btn">
+                        <i class="fas fa-star"></i>
+                        <label> Star</label>
+                    </a>
+                    <a href="#" class="tr-btn tr-icon-label-btn">
+                        <i class="fas fa-paper-plane"></i>
+                        <label> Sent mail</label>
+                    </a>
+                    <a href="#" class="tr-btn tr-icon-label-btn">
+                        <i class="fas fa-envelope-open"></i>
+                        <label> Drafts</label>
+                    </a>
+                </ul>
+                <hr>
+                <ul class="tr-drawer-options">
+                    <h3>Labels</h3>
+                    <ul class="tr-stacked-links">
+                        <a href="#" class="tr-btn tr-icon-label-btn">
+                            <i class="fas fa-bookmark"></i>
+                            <label> Inbox</label>
+                        </a>
+                        <a href="#" class="tr-btn tr-icon-label-btn">
+                            <i class="fas fa-bookmark"></i>
+                            <label> Star</label>
+                        </a>
+                        <a href="#" class="tr-btn tr-icon-label-btn">
+                            <i class="fas fa-bookmark"></i>
+                            <label> Sent mail</label>
+                        </a>
+                        <a href="#" class="tr-btn tr-icon-label-btn">
+                            <i class="fas fa-bookmark"></i>
+                            <label> Drafts</label>
+                        </a>
+                    </ul>
+                </ul>
+                <hr>
+                <ul class="tr-stacked-links">
+                    <a href="#" class="tr-btn tr-icon-label-btn">
+                        <i class="fas fa-cog"></i>
+                        <label> Settings</label>
+                    </a>
+                    <a href="#" class="tr-btn tr-icon-label-btn">
+                        <i class="fas fa-home"></i>
+                        <label> Star</label>
+                    </a>
+                    <a href="#" class="tr-btn tr-icon-label-btn">
+                        <i class="fas fa-home"></i>
+                        <label> Sent mail</label>
+                    </a>
+                </ul>
+            </div>
+    </aside>
+    <main>
+        <header>
+            <button class="tr-hamburger" data-target="sidebar1">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="header-heading">
+                <h1>Drawer</h1>
+            </div>
+        </header>
+    
+        <div class="main-content">
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis quas et ad aut ullam minima saepe est modi quae id iusto omnis officia quidem eaque voluptates quasi, optio itaque, aperiam aliquam obcaecati fugiat dolorum possimus nam. Laborum facere doloremque numquam ab, dicta accusantium quia molestias? Fugiat, asperiores deserunt. Eveniet expedita esse ea odit nam a nisi dicta, ipsam aliquam dolores quia laudantium in qui rem, dolor reprehenderit. Quas, tempore voluptatibus earum eveniet, molestiae, recusandae reiciendis nemo quidem sint suscipit ut laborum dicta quaerat at? Sed exercitationem reprehenderit dicta, debitis iure quam aut veniam repudiandae ipsum minima quod est officiis non.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis quas et ad aut ullam minima saepe est modi quae id iusto omnis officia quidem eaque voluptates quasi, optio itaque, aperiam aliquam obcaecati fugiat dolorum possimus nam. Laborum facere doloremque numquam ab, dicta accusantium quia molestias? Fugiat, asperiores deserunt. Eveniet expedita esse ea odit nam a nisi dicta, ipsam aliquam dolores quia laudantium in qui rem, dolor reprehenderit. Quas, tempore voluptatibus earum eveniet, molestiae, recusandae reiciendis nemo quidem sint suscipit ut laborum dicta quaerat at? Sed exercitationem reprehenderit dicta, debitis iure quam aut veniam repudiandae ipsum minima quod est officiis non.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis quas et ad aut ullam minima saepe est modi quae id iusto omnis officia quidem eaque voluptates quasi, optio itaque, aperiam aliquam obcaecati fugiat dolorum possimus nam. Laborum facere doloremque numquam ab, dicta accusantium quia molestias? Fugiat, asperiores deserunt. Eveniet expedita esse ea odit nam a nisi dicta, ipsam aliquam dolores quia laudantium in qui rem, dolor reprehenderit. Quas, tempore voluptatibus earum eveniet, molestiae, recusandae reiciendis nemo quidem sint suscipit ut laborum dicta quaerat at? Sed exercitationem reprehenderit dicta, debitis iure quam aut veniam repudiandae ipsum minima quod est officiis non.
+            </p>
+        </div>
+    </main>
+
+    </div>
+    
+    <div class="container">
+        <aside id="sidebar2" class="tr-drawer tr-dismissible-drawer">
         <div class="tr-drawer-header">
             <h2 class="tr-drawer-heading">Mail</h2>
             <h3>email@jaiswal.io</h3>
         </div>
-
         <div class="tr-drawer-content">
             <ul class="tr-stacked-links">
-                <a href="#" class="icon-label-btn">
-                    <i class="fas-fa-home"></i>
+                <a href="#" class="tr-btn tr-icon-label-btn">
+                    <i class="fas fa-inbox"></i>
                     <label> Inbox</label>
                 </a>
-                <a href="#" class="icon-label-btn">
-                    <i class="fas-fa-home"></i>
+                <a href="#" class="tr-btn tr-icon-label-btn">
+                    <i class="fas fa-star"></i>
                     <label> Star</label>
                 </a>
-                <a href="#" class="icon-label-btn">
-                    <i class="fas-fa-home"></i>
+                <a href="#" class="tr-btn tr-icon-label-btn">
+                    <i class="fas fa-paper-plane"></i>
                     <label> Sent mail</label>
                 </a>
-                <a href="#" class="icon-label-btn">
-                    <i class="fas-fa-home"></i>
+                <a href="#" class="tr-btn tr-icon-label-btn">
+                    <i class="fas fa-envelope-open"></i>
                     <label> Drafts</label>
                 </a>
             </ul>
+            <hr>
             <ul class="tr-drawer-options">
                 <h3>Labels</h3>
                 <ul class="tr-stacked-links">
-                    <a href="#" class="icon-label-btn">
-                        <i class="fas-fa-home"></i>
+                    <a href="#" class="tr-btn tr-icon-label-btn">
+                        <i class="fas fa-bookmark"></i>
                         <label> Inbox</label>
                     </a>
-                    <a href="#" class="icon-label-btn">
-                        <i class="fas-fa-home"></i>
+                    <a href="#" class="tr-btn tr-icon-label-btn">
+                        <i class="fas fa-bookmark"></i>
                         <label> Star</label>
                     </a>
-                    <a href="#" class="icon-label-btn">
-                        <i class="fas-fa-home"></i>
+                    <a href="#" class="tr-btn tr-icon-label-btn">
+                        <i class="fas fa-bookmark"></i>
                         <label> Sent mail</label>
                     </a>
-                    <a href="#" class="icon-label-btn">
-                        <i class="fas-fa-home"></i>
+                    <a href="#" class="tr-btn tr-icon-label-btn">
+                        <i class="fas fa-bookmark"></i>
                         <label> Drafts</label>
                     </a>
                 </ul>
             </ul>
-            <ul class="tr-drawer-links">
-                <a href="#" class="icon-label-btn">
-                    <i class="fas-fa-home"></i>
-                    <label> Inbox</label>
+            <hr>
+            <ul class="tr-stacked-links">
+                <a href="#" class="tr-btn tr-icon-label-btn">
+                    <i class="fas fa-cog"></i>
+                    <label> Settings</label>
                 </a>
-                <a href="#" class="icon-label-btn">
-                    <i class="fas-fa-home"></i>
+                <a href="#" class="tr-btn tr-icon-label-btn">
+                    <i class="fas fa-home"></i>
                     <label> Star</label>
                 </a>
-                <a href="#" class="icon-label-btn">
-                    <i class="fas-fa-home"></i>
+                <a href="#" class="tr-btn tr-icon-label-btn">
+                    <i class="fas fa-home"></i>
                     <label> Sent mail</label>
                 </a>
             </ul>
         </div>
     </aside>
-
-    <header>
-        <div class="tr-hamburger">
-            <i class="fas fa-bars"></i>
-        </div>
-        <div class="header-heading">
-            <h1>Drawer</h1>
-        </div>
-    </header>
-    
     <main>
-        <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis quas et ad aut ullam minima saepe est modi quae id iusto omnis officia quidem eaque voluptates quasi, optio itaque, aperiam aliquam obcaecati fugiat dolorum possimus nam. Laborum facere doloremque numquam ab, dicta accusantium quia molestias? Fugiat, asperiores deserunt. Eveniet expedita esse ea odit nam a nisi dicta, ipsam aliquam dolores quia laudantium in qui rem, dolor reprehenderit. Quas, tempore voluptatibus earum eveniet, molestiae, recusandae reiciendis nemo quidem sint suscipit ut laborum dicta quaerat at? Sed exercitationem reprehenderit dicta, debitis iure quam aut veniam repudiandae ipsum minima quod est officiis non.
-        </p>
-        <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis quas et ad aut ullam minima saepe est modi quae id iusto omnis officia quidem eaque voluptates quasi, optio itaque, aperiam aliquam obcaecati fugiat dolorum possimus nam. Laborum facere doloremque numquam ab, dicta accusantium quia molestias? Fugiat, asperiores deserunt. Eveniet expedita esse ea odit nam a nisi dicta, ipsam aliquam dolores quia laudantium in qui rem, dolor reprehenderit. Quas, tempore voluptatibus earum eveniet, molestiae, recusandae reiciendis nemo quidem sint suscipit ut laborum dicta quaerat at? Sed exercitationem reprehenderit dicta, debitis iure quam aut veniam repudiandae ipsum minima quod est officiis non.
-        </p>
+        <header>
+            <button class="tr-btn tr-btn-primary flex-center flex tr-hamburger" data-target="sidebar2">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="header-heading">
+                <h1>Drawer</h1>
+            </div>
+        </header>
+    
+        <div class="main-content">
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis quas et ad aut ullam minima saepe est modi quae id iusto omnis officia quidem eaque voluptates quasi, optio itaque, aperiam aliquam obcaecati fugiat dolorum possimus nam. Laborum facere doloremque numquam ab, dicta accusantium quia molestias? Fugiat, asperiores deserunt. Eveniet expedita esse ea odit nam a nisi dicta, ipsam aliquam dolores quia laudantium in qui rem, dolor reprehenderit. Quas, tempore voluptatibus earum eveniet, molestiae, recusandae reiciendis nemo quidem sint suscipit ut laborum dicta quaerat at? Sed exercitationem reprehenderit dicta, debitis iure quam aut veniam repudiandae ipsum minima quod est officiis non.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis quas et ad aut ullam minima saepe est modi quae id iusto omnis officia quidem eaque voluptates quasi, optio itaque, aperiam aliquam obcaecati fugiat dolorum possimus nam. Laborum facere doloremque numquam ab, dicta accusantium quia molestias? Fugiat, asperiores deserunt. Eveniet expedita esse ea odit nam a nisi dicta, ipsam aliquam dolores quia laudantium in qui rem, dolor reprehenderit. Quas, tempore voluptatibus earum eveniet, molestiae, recusandae reiciendis nemo quidem sint suscipit ut laborum dicta quaerat at? Sed exercitationem reprehenderit dicta, debitis iure quam aut veniam repudiandae ipsum minima quod est officiis non.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis quas et ad aut ullam minima saepe est modi quae id iusto omnis officia quidem eaque voluptates quasi, optio itaque, aperiam aliquam obcaecati fugiat dolorum possimus nam. Laborum facere doloremque numquam ab, dicta accusantium quia molestias? Fugiat, asperiores deserunt. Eveniet expedita esse ea odit nam a nisi dicta, ipsam aliquam dolores quia laudantium in qui rem, dolor reprehenderit. Quas, tempore voluptatibus earum eveniet, molestiae, recusandae reiciendis nemo quidem sint suscipit ut laborum dicta quaerat at? Sed exercitationem reprehenderit dicta, debitis iure quam aut veniam repudiandae ipsum minima quod est officiis non.
+            </p>
+        </div>
     </main>
+
+    </div>
+
+    <div class="container">
+        <aside id="sidebar3" class="tr-drawer tr-modal-drawer">
+        <div class="tr-drawer-header">
+            <h2 class="tr-drawer-heading">Mail</h2>
+            <h3>email@jaiswal.io</h3>
+        </div>
+        <div class="tr-drawer-content">
+            <ul class="tr-stacked-links">
+                <a href="#" class="tr-btn tr-icon-label-btn">
+                    <i class="fas fa-inbox"></i>
+                    <label> Inbox</label>
+                </a>
+                <a href="#" class="tr-btn tr-icon-label-btn">
+                    <i class="fas fa-star"></i>
+                    <label> Star</label>
+                </a>
+                <a href="#" class="tr-btn tr-icon-label-btn">
+                    <i class="fas fa-paper-plane"></i>
+                    <label> Sent mail</label>
+                </a>
+                <a href="#" class="tr-btn tr-icon-label-btn">
+                    <i class="fas fa-envelope-open"></i>
+                    <label> Drafts</label>
+                </a>
+            </ul>
+            <hr>
+            <ul class="tr-drawer-options">
+                <h3>Labels</h3>
+                <ul class="tr-stacked-links">
+                    <a href="#" class="tr-btn tr-icon-label-btn">
+                        <i class="fas fa-bookmark"></i>
+                        <label> Inbox</label>
+                    </a>
+                    <a href="#" class="tr-btn tr-icon-label-btn">
+                        <i class="fas fa-bookmark"></i>
+                        <label> Star</label>
+                    </a>
+                    <a href="#" class="tr-btn tr-icon-label-btn">
+                        <i class="fas fa-bookmark"></i>
+                        <label> Sent mail</label>
+                    </a>
+                    <a href="#" class="tr-btn tr-icon-label-btn">
+                        <i class="fas fa-bookmark"></i>
+                        <label> Drafts</label>
+                    </a>
+                </ul>
+            </ul>
+            <hr>
+            <ul class="tr-stacked-links">
+                <a href="#" class="tr-btn tr-icon-label-btn">
+                    <i class="fas fa-cog"></i>
+                    <label> Settings</label>
+                </a>
+                <a href="#" class="tr-btn tr-icon-label-btn">
+                    <i class="fas fa-home"></i>
+                    <label> Star</label>
+                </a>
+                <a href="#" class="tr-btn tr-icon-label-btn">
+                    <i class="fas fa-home"></i>
+                    <label> Sent mail</label>
+                </a>
+            </ul>
+        </div>
+    </aside>
+    <main>
+        <header>
+            <button class="tr-btn tr-btn-primary flex-center flex tr-hamburger" data-target="sidebar3">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="header-heading">
+                <h1>Drawer</h1>
+            </div>
+        </header>
+    
+        <div class="main-content">
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis quas et ad aut ullam minima saepe est modi quae id iusto omnis officia quidem eaque voluptates quasi, optio itaque, aperiam aliquam obcaecati fugiat dolorum possimus nam. Laborum facere doloremque numquam ab, dicta accusantium quia molestias? Fugiat, asperiores deserunt. Eveniet expedita esse ea odit nam a nisi dicta, ipsam aliquam dolores quia laudantium in qui rem, dolor reprehenderit. Quas, tempore voluptatibus earum eveniet, molestiae, recusandae reiciendis nemo quidem sint suscipit ut laborum dicta quaerat at? Sed exercitationem reprehenderit dicta, debitis iure quam aut veniam repudiandae ipsum minima quod est officiis non.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis quas et ad aut ullam minima saepe est modi quae id iusto omnis officia quidem eaque voluptates quasi, optio itaque, aperiam aliquam obcaecati fugiat dolorum possimus nam. Laborum facere doloremque numquam ab, dicta accusantium quia molestias? Fugiat, asperiores deserunt. Eveniet expedita esse ea odit nam a nisi dicta, ipsam aliquam dolores quia laudantium in qui rem, dolor reprehenderit. Quas, tempore voluptatibus earum eveniet, molestiae, recusandae reiciendis nemo quidem sint suscipit ut laborum dicta quaerat at? Sed exercitationem reprehenderit dicta, debitis iure quam aut veniam repudiandae ipsum minima quod est officiis non.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis quas et ad aut ullam minima saepe est modi quae id iusto omnis officia quidem eaque voluptates quasi, optio itaque, aperiam aliquam obcaecati fugiat dolorum possimus nam. Laborum facere doloremque numquam ab, dicta accusantium quia molestias? Fugiat, asperiores deserunt. Eveniet expedita esse ea odit nam a nisi dicta, ipsam aliquam dolores quia laudantium in qui rem, dolor reprehenderit. Quas, tempore voluptatibus earum eveniet, molestiae, recusandae reiciendis nemo quidem sint suscipit ut laborum dicta quaerat at? Sed exercitationem reprehenderit dicta, debitis iure quam aut veniam repudiandae ipsum minima quod est officiis non.
+            </p>
+        </div>
+    </main>
+
+    </div>
+    <script src="index.js"></script>
 </body>
 </html>

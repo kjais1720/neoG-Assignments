@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Luxurious+Roman&family=Roboto&family=Raleway:wght@600&display=swap');
-@import url(./card-variants.css);
 
 *,*::after, *::before{
     padding: 0;
@@ -7,22 +5,195 @@
     box-sizing: border-box;
 }
 
-a, button{
-    cursor: pointer;
-    text-decoration: none;
-    color: inherit;
+
+body{
+    display: flex;
+    min-height: 100vh;
+}
+
+h1{
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 h2{
+    font-size: 1.5rem;
+    font-weight:500;
+}
 
+h3{
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgb(179, 174, 174);
+}
+
+p{
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a,button{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+*,*::after,*::before{
+    transition: all ease 0.3s;
 }
 
 body{
-    --radius:.3em;
-    --primary-color:#008080;
-    --secondary-color:#0f1657;
-    max-width: 95vw;
-    min-height: 100vh;
-    font-size: 1rem;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 30px;
+}
+
+.container{
+    max-width: 1000px;
+    max-height: 90vh;
+    width: 100%;
+    border: solid 1px red;
+    padding: 0;
+    display: flex;
+    font-size: 0.8rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.tr-hamburger{
+    color: #fff;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    background-color: transparent;
+}
+
+.tr-drawer{
+    font-size: 1rem;
+    overflow-y: hidden;
+    flex-shrink: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    width: 18em;
+    padding: 20px 0 20px 20px;
+}
+
+.tr-drawer hr{
+    margin: 5px auto;
+    width: 90%;
+    border: none;
+    border-top: solid 1px #ccc;
+    
+}
+
+.tr-drawer-content{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: scroll;
+    max-height: 75vh;
+    padding: 0 20px 0 0;
+}
+
+
+.tr-stacked-links{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tr-stacked-links a{
+    padding: 10px;
+    color: #051657;
+    border: none;
+}
+
+main{
+    flex: 1;
+    max-height: 100%;
+    overflow-y: scroll ;    
+}
+
+header{
+    display: flex;
+    align-items: center;
+    gap: 3em;
+    color: #fff;
+    background-color: #051657;
+    padding: 10px;
+}
+
+.main-content{
+    padding: 5vh 5vw;
+}
+.main-content p{
+    font-size: 1.5em;
+    margin-top: 50px;
+}
+
+
+/********* Dissmissible drawer **********/
+.tr-dismissible-drawer{
+    width: 0;
+    padding: 0;
+}
+
+.tr-dismissible-drawer.active{
+    width: 18em;
+    padding: 20px 0 20px 20px;
+}
+
+
+/********* Modal drawer **********/
+
+.tr-modal-drawer{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    /* transition: left ease 1s; */
+    z-index: 99;
+}
+
+.tr-modal-drawer.active{
+    left: 0;
+}
+
+.tr-modal-drawer.active +*::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.tr-icon-label-btn{
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    align-items: center;
+}
+
+.tr-icon-label-btn >*{
+    border: none;
+    outline: none;
+    text-decoration: none;
+}
+
+.tr-btn:hover{
+    background-color: hsla(180, 100%, 25%,0.2);
+    /* color: var(--tr-primary); */
+}
+
+.tr-btn:focus{
+    background-color: hsla(180, 100%, 25%,0.4);
+    /* color: var(--tr-primary); */
 }
