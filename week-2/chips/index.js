@@ -16,18 +16,11 @@ if(container && input){
         return newChip
     }
 
-    let addListenersToChips = () => {
-        const chipsCloseIcons = document.querySelectorAll('.tr-chip-wrapper .close-icon')
-        chipsCloseIcons.forEach(closeIcon => closeIcon.addEventListener('click',()=>{
-            closeIcon.parentNode.parentNode.removeChild(closeIcon.parentNode);
-        }))
-    }
 
     document.addEventListener('keydown',e=>{
         if(e.key==="Enter" && input.value !== ''){
             const newChip = createNewChip(input.value);            
             container.insertBefore(newChip,input);
-            addListenersToChips();
             input.value='';
         }
 
@@ -38,7 +31,14 @@ if(container && input){
             removeChip(chipToRemove);
         }
     })
-    addListenersToChips();
+
+    //Event Delegation
+    container.addEventListener('click', e=>{
+        if(e.target.className.includes('close-icon')){
+            removeChip(e.target.parentNode);
+        }
+    })
+
     
 
 }
