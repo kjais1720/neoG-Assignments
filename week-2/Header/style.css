@@ -1,0 +1,179 @@
+*, *::after, *::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+    padding: 5vh 5vw;
+}
+
+/****************** Icon buttons ************/
+
+.tr-icon-btn{
+    color: inherit;
+    background-color: transparent;
+    border: none;
+    position: relative;
+    border-radius: 50%;
+}
+
+.tr-icon-btn >*{
+    position: relative;
+    z-index: 1;
+}
+
+.tr-icon-btn:hover{
+    background: none;
+}
+
+.tr-icon-btn::after{
+    height: 1.9em; /* So that the height and width of the after will always be 1.8 times the font-size of the icon & always be a circle*/
+    width: 1.9em;
+    content: '';
+    position: absolute;
+    background-color: hsla(180, 100%, 25%,0.2);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: all ease 0.3s;
+}
+
+.tr-icon-btn:hover::after{
+    transform: translate(-50%, -50%) scale(1);
+    background-color: hsla(180, 100%, 25%,0.2);
+}
+
+.tr-icon-btn:focus::after{
+    transform: translate(-50%, -50%) scale(1);
+    background-color: hsla(180, 100%, 25%,0.4) ;
+}
+
+.container{
+    max-width: 800px;
+    max-height: 300px;
+    overflow-y: scroll;
+    box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.2);
+}
+
+.container-wrapper >h2{
+    text-align: center;
+    color: #0f1657;
+}
+
+/***************** Header ***************/
+
+.hide-nav .tr-header{
+    top: -150px;
+}
+
+.tr-header{
+    --tr-primary: #0f1657;
+    --tr-teal:#008080;
+    --tr-white:#fff;
+}
+
+.tr-header{
+    padding: 10px;
+    background-color: var(--tr-primary);
+    color: var(--tr-white);
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    transition: all ease 0.3s;
+}
+
+.header-brand{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.header-brand span:nth-child(2){
+    color: var(--tr-teal);
+}
+
+.tr-nav{
+    margin-left: auto;
+    display: flex;
+    gap: 20px;
+}
+
+.tr-icon-btn{
+    font-size: 1.2em;
+}
+
+.tr-icon-btn:hover, .tr-icon-btn:focus{
+    transition-delay: 0.1s;      
+    color: var(--tr-primary);
+}
+
+.tr-icon-btn:hover::after, .tr-icon-btn:focus::after{
+    background-color: var(--tr-white);
+}
+
+/************ Fixed Heaeder **************/
+
+.tr-fixed-header{
+    position: sticky;
+    top: 0;
+}
+
+.hide-nav .tr-fixed-header{
+    top: 0;
+}
+
+/************ Prominent Heaeder **************/
+
+.tr-prominent-header{
+    flex-wrap: wrap;
+    position: sticky;
+    top: -50px;
+}
+
+.tr-prominent-header .tr-heading{
+    flex-grow:1;
+    order: 1;
+    flex-basis: 100%;
+}
+
+/************ Short Heaeder **************/
+.tr-short-collapsed-header{
+    border-radius: 0 0 20px 0;
+    width: fit-content;
+}
+
+.tr-short-collapsed-header .tr-heading{
+    display: none;
+}
+
+main{
+    padding: 30px;
+}
+
+
+/************ Short 2 Heaeder **************/
+
+.hide-nav .tr-short-header{
+    width: fit-content;
+    border-radius: 0 0 20px 0;
+    top:0;
+    transition: all ease 0.3s;
+}
+
+.hide-nav .tr-short-header *{
+    transition: all ease 0.3s;
+}
+
+.hide-nav .tr-short-header .tr-heading{
+    display: none;
+}
