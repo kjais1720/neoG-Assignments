@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Luxurious+Roman&family=Roboto&family=Raleway:wght@600&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+button{
+    border: none;
+    outline: none;
+}
+
+.snackbar.hide{
+    display: none;
+}
+
+.buttons{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.buttons button{
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: hsla(271, 76%, 53%,0.5);
+}
+
+.buttons button:hover, .buttons button:focus{
+    background-color: hsl(271, 76%, 53%);
+}
+
+.snackbar{
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    background-color: #333333;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: fit-content;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    position: fixed;
+    left: 50%;
+    bottom: 50px;
+    transform: translateX(-50%);
+}
+
+.snackbar-link{
+    text-decoration: none;
+    background-color: transparent;
+    font-size: inherit;
+    color: hsl(271, 76%, 53%);
+    cursor: pointer;
+}
+
+.snackbar-link:hover{
+    color: hsla(271, 76%, 53%,0.5);
+}
+
+.close-icon{
+    border: none;
+    background-color: transparent;
+    font-size: inherit;
+    color: #fff;
+    cursor: pointer;
+}
+
+.close-icon:hover{
+    color: #ccc;
+}
+
+/*************** Leading Snackbar *****************/
+
+.snackbar-leading{
+    left: 50px;
+    transform: unset;
+}
+
+
+/*************** Stacked Snackbar *****************/
+
+.snackbar-stacked{
+    justify-content: flex-end;
+}
+
+.snackbar-stacked p{
+    width: 100%;
+}

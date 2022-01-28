@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      crossorigin="anonymous"      
+      />
+      <link rel="stylesheet" href="style.css">
+    <title>Snackbar</title>
+</head>
+<body>
+    <div class="buttons">
+        <button data-target='snackbarLeading'>Leading</button>
+        <button data-target='snackbar'>Baseline</button>
+        <button data-target='snackbarStacked'>Stacked</button>
+    </div>
+    <div id="snackbarLeading" class="snackbar hide snackbar-leading">
+        <p class="snackbar-text">Can't send photos. Retry 5 seconds later</p>
+        <a class="snackbar-link">Undo</a>
+        <button class="close-icon"><i class="fas fa-times-circle"></i></button>
+    </div>
+
+    <div id="snackbar" class="snackbar hide">
+        <p class="snackbar-text">Can't send photos. Retry 5 seconds later</p>
+        <a class="snackbar-link">Undo</a>
+        <button class="close-icon"><i class="fas fa-times-circle"></i></button>
+    </div>
+    <div id="snackbarStacked" class="snackbar hide snackbar-stacked">
+        <p class="snackbar-text">Can't send photos. Retry 5 seconds later</p>
+        <a class="snackbar-link">Undo</a>
+        <button class="close-icon"><i class="fas fa-times-circle"></i></button>
+    </div>
+
+    <script>
+        const buttons = document.querySelectorAll('.buttons button');
+        buttons.forEach(btn=>{
+            btn.addEventListener('click', ()=> {
+                const targetSnackbar = document.getElementById(btn.getAttribute('data-target'));
+
+                targetSnackbar.classList.remove('hide');
+
+                setTimeout(()=>targetSnackbar.classList.add('hide'), 3000)
+            })
+        })
+    </script>
+</body>
+</html>
