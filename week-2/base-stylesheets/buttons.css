@@ -1,0 +1,134 @@
+body{
+    --tr-primary: hsl(234, 71%, 20%);
+    --tr-secondary: hsl(180, 100%, 25%);
+    --tr-gray: #ccc;
+    --tr-bg-teal-light: hsla(180, 100%, 25%,0.2);
+    --tr-bg-teal-dark: hsla(180, 100%, 25%,0.4);
+}
+
+.tr-btn{
+    padding: 10px;
+    border-radius: 5px;
+    border: solid 1px var(--tr-gray);
+    outline: none;
+}
+/* 
+.tr-btn:hover{
+    background-color: var(--tr-gray);
+    color: var(--tr-white);
+}
+
+.tr-btn:focus, .tr-btn:active{
+    background-color: var(--tr-gray);
+    color: var(--tr-white);
+} */
+.tr-btn:hover{
+    background-color: var(--tr-bg-teal-light);
+    color: var(--tr-primary);
+}
+
+.tr-btn:focus{
+    background-color: var(--tr-bg-teal-dark);
+    color: var(--tr-primary);
+}
+
+.tr-btn-active{
+    transform: scale(.98);
+}
+
+/************ Primary button ***************/
+
+.tr-btn-transparent-bg{
+    background-color: transparent;
+    border: none;
+    color: inherit;
+    padding: 10px;
+    border-radius: inherit;
+}
+
+.tr-btn-transparent-bg:is(:hover,:active, :focus) {
+    background-color: var(--tr-bg-teal-light);
+    color: var(--tr-primary);
+}
+.tr-btn-transparent-bg:focus{
+    background-color: var(--tr-bg-teal-dark);
+}
+
+/************ Primary button ***************/
+
+.tr-btn-primary{
+    background-color: var(--tr-primary);
+    color: var(--tr-white);
+}
+
+
+/************ Secondary button ***************/
+
+.tr-btn-secondary{
+    border: solid 2px var(--tr-primary);
+    background-color: var(--tr-bg-light);
+    color: var(--tr-primary);
+}
+
+.tr-btn-secondary:hover{
+    background-color: var(--tr-primary);
+    color: var(--tr-white);
+}
+
+/************ buttons with icons and label ***************/
+
+.tr-icon-label-btn{
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    align-items: center;
+}
+
+.tr-icon-label-btn >*{
+    border: none;
+    outline: none;
+    text-decoration: none;
+}
+
+
+/************ buttons with icons and label ***************/
+
+.tr-icon-btn{
+    color: inherit;
+    background-color: transparent;
+    border: none;
+    position: relative;
+    border-radius: 50%;
+}
+
+.tr-icon-btn >*{
+    position: relative;
+    z-index: 1;
+}
+
+.tr-icon-btn:hover{
+    background: none;
+}
+
+.tr-icon-btn::after{
+    height: 1.9em; /* So that the height and width of the after will always be 1.8 times the font-size of the icon & always be a circle*/
+    width: 1.9em;
+    content: '';
+    position: absolute;
+    background-color: var(--tr-bg-teal-light);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: all ease 0.3s;
+}
+
+.tr-icon-btn:hover::after{
+    transform: translate(-50%, -50%) scale(1);
+    background-color: var(--tr-bg-teal-light);
+}
+
+.tr-icon-btn:focus::after{
+    transform: translate(-50%, -50%) scale(1);
+    background-color: var(--tr-bg-teal-dark) ;
+}
