@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawers</title>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      crossorigin="anonymous"      
+      />
+    <link rel="stylesheet" href="../skeleton.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <aside id="sidebar" class="tr-drawer tr-drawer-main bg-blur tr-modal-drawer">
+        <div class="tr-drawer-content">
+            <ul class="tr-stacked-links">
+                <a href="../Badge/badges.html" class="tr-btn tr-icon-label-btn">
+                    <label> Badges</label>
+                </a>
+                <a href="../Card/cards.html" class="tr-btn tr-icon-label-btn">
+                    <label> Cards </label>
+                </a>
+                <a href="#" class="tr-btn tr-icon-label-btn">
+                    <label> Chips </label>
+                </a>
+                <a href="../Drawer/drawer.html" class="tr-btn tr-icon-label-btn">
+                    <label> Drawer </label>
+                </a>
+                <a href="../Dialogs/dialogs.html" class="tr-btn tr-icon-label-btn">
+                    <label> Dialogs</label>
+                </a>
+                <a href="../Header/headers.html" class="tr-btn tr-icon-label-btn">
+                    <label> Headers</label>
+                </a>
+                <a href="../Snackbar/snackbars.html" class="tr-btn tr-icon-label-btn">
+                    <label> Snackbar</label>
+                </a>
+                <a href="../Tabs/tabs.html" class="tr-btn tr-icon-label-btn">
+                    <label> Tabs</label>
+                </a>
+            
+            </ul>
+            
+        </div>
+    </aside>
+
+    <main>
+        <header class="tr-header">
+            <button class="tr-btn tr-btn-primary tr-hamburger" data-target="sidebar">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="tr-heading">
+                <h2 class="header-brand">Assignments</h2>
+            </div>
+            
+        </header>
+    
+        <div class="main-content bg-blur">
+            
+            <div class="tr-basic-chips-wrapper">
+                
+            </div>
+
+            <div class="tr-chips-input-wrapper flex gap10 pad10">
+                <button class="tr-chip-wrapper">
+                    <span>Chip 1</span>
+                    <i class="close-icon fas fa-times-circle"></i>
+                </button>
+                <input type="text" id="input" placeholder="input text">
+            </div>        
+
+        </div>
+    </main>
+
+    <script src="index.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>

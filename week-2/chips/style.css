@@ -1,17 +1,23 @@
+.main-content{
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+}
+
 .tr-chips-input-wrapper{
     border: solid 1px #0f1657;
-    width: fit-content;
     border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    left: 50%;
+    max-width: 400px;
+    padding: 10px;
     position: absolute;
     top: 50%;
-    left: 50%;
     transform: translate(-50%, -50%);
-    flex-wrap: wrap;
-    max-width: 400px;
     width: 90%;
-    padding: 10px;
-    display: flex;
-    gap: 5px;
+    width: fit-content;
 }
 
 .tr-chips-input-wrapper >*{

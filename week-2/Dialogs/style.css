@@ -1,0 +1,82 @@
+@import url(../base-stylesheets/buttons.css);
+button.tr-dialog-open-btn{
+    padding: 15px 30px;
+    border-radius: 10px;
+}
+
+article.tr-dialog-wrapper{
+    --tr-bg-dark-overlay: rgba(0,0,0,0.2) ;
+    --tr-white: #fff;
+    --tr-box-shadow: 2px 2px 30px 2px var(--tr-bg-dark-overlay); 
+}
+
+.tr-dialog-wrapper{
+    position: fixed;
+    inset: 0;
+    background-color: var(--tr-bg-dark-overlay);
+    display: none;
+    font-size: 1rem;
+    max-height: 100vh;
+    overflow-y: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.tr-dialog-wrapper.active{
+    display: flex;
+}
+
+.tr-dialog-box{
+    background-color: var(--tr-white);
+    box-shadow: var(--tr-box-shadow);
+    padding: 1.25em;
+    border-radius: 0.625em;
+    display: flex;
+    flex-direction: column;
+    gap: 1.875em;
+    max-width: 18.75em;
+    min-width: 17em;
+    position: relative;
+}
+
+
+.tr-dialog-text h2{
+    font-size: 1.5em;
+}
+
+.tr-dialog-text p{
+    font-size: 1em;
+}
+
+.tr-dialog-box button{
+    font-size: 1em;
+    border-radius: inherit;
+}
+
+
+.tr-dialog-box .tr-dialog-close-btn{
+    position: absolute;
+    right: 5%;
+    top: 5%;
+}
+
+.tr-dialog-options{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.tr-dialog-buttons{
+    display: flex;
+    gap: 10px;
+}
+
+.tr-dialog-simple .tr-dialog-buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+

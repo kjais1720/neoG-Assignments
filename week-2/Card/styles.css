@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Luxurious+Roman&family=Roboto&family=Raleway:wght@600&display=swap');
-@import url(./card-variants.css);
+/* @import url(./card-variants.css); */
 
 *,*::after, *::before{
     padding: 0;
@@ -20,16 +20,12 @@ a{
     --bg-dark: hsla(180, 100%, 25%,0.4);
 }
 
-body{
-    min-height: 100vh;
+.cards-container{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(18.75em, 1fr));
     align-items: center;
     justify-items: center;
     gap: 1.25rem;
-    place-content: center;
-    background-color: wheat;
-    padding: 5vw;
 }
 
 .tr-card{
@@ -79,17 +75,16 @@ body{
 }
 
 .tr-card-badge::after{
+    content:"";
     border-top: .4em solid var(--secondary-color);
     border-left: .4em solid var(--secondary-color);
     border-right: .4em solid transparent;
     border-bottom: .4em solid transparent;
     bottom: -.7em;
-    content:"";
     height: 0;
     position: absolute;
     right: -1px;
     width: 0;
-    z-index: -1;
 }
 
 .tr-card-footer{

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dialogs</title>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      crossorigin="anonymous"      
+      />
+      <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="dialogs-wrapper">
+    
+    <button data-target='tr-dialog-alert' class="tr-btn tr-btn-primary tr-dialog-open-btn">
+        open alert dialog
+    </button>
+    <button data-target='tr-dialog-simple' class="tr-btn tr-btn-primary tr-dialog-open-btn">
+        open simple dialog
+    </button>
+    <button data-target='tr-dialog-confirmation' class="tr-btn tr-btn-primary tr-dialog-open-btn">
+        open confirmation dialog
+    </button>
+    
+    <article id='tr-dialog-alert' class="tr-dialog-wrapper">
+        <div class="tr-dialog-box">
+            <div class="tr-dialog-text">
+                <h2 class="tr-dialog-heading">Dialog 1</h2>
+                <p class="tr-dialog-subtext"> Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div class="tr-dialog-buttons">
+                <button class="tr-btn tr-btn-primary">Cancel</button>
+                <button class="tr-btn tr-btn-primary">Accept</button>
+            </div>
+            <button class="tr-btn-transparent-bg tr-dialog-close-btn"><i class="fas fa-times"></i></button>
+        </div>
+    </article>
+    
+        
+    <article id='tr-dialog-simple' class="tr-dialog-wrapper tr-dialog-simple">
+        <div class="tr-dialog-box">
+            <div class="tr-dialog-text">
+                <h2>Simple Dialog</h2>
+            </div>
+            <div class="tr-dialog-buttons stacked gap10">
+                <button class="tr-btn tr-icon-label-btn tr-btn-transparent-bg"> <i class="fa fa-user"></i> Button 1</button>
+                <button class="tr-btn tr-icon-label-btn tr-btn-transparent-bg"> <i class="fa fa-user"></i> Button 2</button>
+                <button class="tr-btn tr-icon-label-btn tr-btn-transparent-bg"> <i class="fa fa-user"></i> Button 3</button>
+            </div>
+            <button class="tr-btn tr-btn-transparent-bg tr-dialog-close-btn"><i class="fas fa-times"></i></button>
+        </div>
+    </article>
+        
+        
+        
+    <article id='tr-dialog-confirmation' class="tr-dialog-wrapper tr-dialog-confirmation">
+        <div class="tr-dialog-box">
+            <div class="tr-dialog-text">
+                <h2>Confirmation Dialog</h2>
+            </div>
+            <div class="tr-dialog-options">
+                    <label class="tr-btn tr-btn-transparent-bg" for="option1">
+                        <input name="option" type="radio" id="option1">
+                        Option 1
+                    </label>
+                    <label class="tr-btn tr-btn-transparent-bg" for="option2">
+                            <input name="option" type="radio" id="option2">
+                        Option 2
+                    </label>
+                    <label class="tr-btn tr-btn-transparent-bg" for="option3">
+                            <input name="option" type="radio" id="option3">
+                        Option 3
+                    </label>
+                    <label class="tr-btn tr-btn-transparent-bg" for="option4">
+                            <input name="option" type="radio" id="option4">
+                        Option 4
+                    </label>
+            </div>
+            <div class="tr-dialog-buttons">
+                <button class="tr-btn tr-icon-label-btn tr-btn-transparent-bg"> <i class="fa fa-times"></i> Cancel</button>
+                <button class="tr-btn tr-icon-label-btn tr-btn-transparent-bg"> <i class="fa fa-check"></i> Accept</button>
+            </div>
+            <button class="tr-btn tr-btn-transparent-bg tr-dialog-close-btn"><i class="fas fa-times"></i></button>
+        </div>
+    </article>
+</main>
+
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawers</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="./Dialogs/style.css"> -->
+    <link rel="stylesheet"
+    href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/base16/atlas.min.css"
+    />
+    <link rel="stylesheet" href="./Card/styles.css">
+    <link rel="stylesheet" href="skeleton.css">
+</head>
+<body>
+    <aside id="sidebar" class="tr-drawer tr-drawer-main bg-blur tr-modal-drawer">
+        <div class="tr-drawer-content">
+            <ul class="tr-stacked-links">
+                <a href="#" class="tr-btn tr-icon-label-btn">
+                    <i class="fas fa-inbox"></i>
+                    <label>Badges</label>
+                </a>
+                <a href="#" class="tr-btn tr-icon-label-btn">
+                    <i class="fas fa-star"></i>
+                    <label> Star</label>
+                </a>
+                <a href="#" class="tr-btn tr-icon-label-btn">
+                    <i class="fas fa-paper-plane"></i>
+                    <label> Sent mail</label>
+                </a>
+                <a href="#" class="tr-btn tr-icon-label-btn">
+                    <i class="fas fa-envelope-open"></i>
+                    <label> Drafts</label>
+                </a>
+                <a href="#" class="tr-btn tr-icon-label-btn">
+                    <i class="fas fa-inbox"></i>
+                    <label> Inbox</label>
+                </a>
+                <a href="#" class="tr-btn tr-icon-label-btn">
+                    <i class="fas fa-star"></i>
+                    <label> Star</label>
+                </a>
+                <a href="#" class="tr-btn tr-icon-label-btn">
+                    <i class="fas fa-paper-plane"></i>
+                    <label> Sent mail</label>
+                </a>
+                <a href="#" class="tr-btn tr-icon-label-btn">
+                    <i class="fas fa-envelope-open"></i>
+                    <label> Drafts</label>
+                </a>
+            </ul>
+            
+        </div>
+    </aside>
+    <main>
+        <header class="tr-header">
+            <button class="tr-btn tr-btn-primary tr-hamburger" data-target="sidebar">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="tr-heading">
+                <h2 class="header-brand">Assignments</h2>
+            </div>
+            
+        </header>
+    
+        <div class="main-content bg-blur">
+            
+            <aside id="sidebar" class="tr-drawer">
+                <div class="tr-drawer-header">
+                    <h2>Cards</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reic</p>
+                </div>
+                
+                <div class="tr-drawer-content">
+                    <ul class="tr-stacked-links">
+                        <button data-target="1" class="togglePreviewComponent tr-btn tr-icon-label-btn">
+                            preview-block-1
+                        </button>
+                        <button data-target="2" class="togglePreviewComponent tr-btn tr-icon-label-btn">
+                            preview-block-2
+                        </button>
+                        <button data-target="3" class="togglePreviewComponent tr-btn tr-icon-label-btn">
+                            preview-block-3
+                        </button>                        
+                    
+                    </ul>
+                    
+                </div>
+            </aside>         
+
+            <div class="main-demo-content bg-blur">
+                <div class="tabs-btn-list">
+                    <button class="tab-btn tr-btn tr-icon-label-btn" data-target="preview-blocks">Preview</button>
+                    <button class="tab-btn tr-btn tr-icon-label-btn" data-target="code-blocks">Code</button>
+                </div>
+
+                <div id="preview-blocks" class="preview-blocks tab">
+
+                    <!-- <div id="preview-block-1" class="preview-block">
+                        <button data-target='tr-dialog-alert' class="tr-btn tr-btn-primary tr-dialog-open-btn">
+                            open alert dialog
+                        </button>
+                    </div>
+
+                    <div id="preview-block-2" class="preview-block hide">
+                        <button data-target='tr-dialog-simple' class="tr-btn tr-btn-primary tr-dialog-open-btn">
+                            open simple dialog
+                        </button>
+                    </div>
+
+                    <div id="preview-block-3" class="preview-block hide">
+                        <button data-target='tr-dialog-confirmation' class="tr-btn tr-btn-primary tr-dialog-open-btn">
+                            open confirmation dialog
+                        </button>
+                    </div> -->
+                    <div class="preview-block" id="preview-block-1">
+                        <article class="tr-card">
+                            <div class="tr-card-banner">
+                                <img src="https://picsum.photos/id/211/600/400" alt="">
+                            </div>
+                            <div class="tr-card-header">
+                                <h2 class="title">Lorem Ipsum</h2>
+                                <h3 class="subtitle">lorem ipsum</h3>
+                            </div>
+                            <div class="tr-card-body">
+                                <p class="tr-card-text">
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                    Dolore maxime incidunt corrupti quo pariatur
+                                    aliquid debitis necessitatibus nisi reprehenderit
+                                </p>
+                            </div>
+                            <div class="tr-card-footer">
+                                <div class="tr-card-footer-links">
+                                    <a href ='#' class="cta">Link 1</a>
+                                    <a href ='#' class="cta">Link 2</a>
+                                </div>
+                                <div class="tr-card-footer-buttons">
+                                    <button class="far fa-heart"></button>
+                                    <button class="fas fa-share-alt"></button>
+                                    <button class="fas fa-ellipsis-v"></button>
+                                </div>
+                            </div>
+                            <span class="tr-card-badge">In Progress</span>
+                        </article>
+                    </div>
+                
+                    <div class="preview-block hide" id="preview-block-2">
+                        <article class="tr-card tr-card-header-over">
+                            <div class="tr-card-banner">
+                                <img src="https://picsum.photos/id/211/600/400" alt="">
+                            </div>
+                            <div class="tr-card-header">
+                                <h2 class="title">Lorem Ipsum</h2>
+                                <h3 class="subtitle">lorem ipsum</h3>
+                            </div>
+                            <div class="tr-card-body">
+                                <p class="tr-card-text">
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore maxime incidunt corrupti quo pariatur aliquid debitis necessitatibus nisi reprehenderit
+                                </p>
+                            </div>
+                            <div class="tr-card-footer">
+                                <div class="tr-card-footer-links">
+                                    <a href ='#' class="cta">Link 1</a>
+                                    <a href ='#' class="cta">Link 2</a>
+                                </div>
+                                <div class="tr-card-footer-buttons">
+                                    <button class="far fa-heart"></button>
+                                    <button class="fas fa-share-alt"></button>
+                                    <button class="fas fa-ellipsis-v"></button>
+                                </div>
+                            </div>
+                            <span class="tr-card-badge">In Progress</span>
+                        </article>
+                    </div>
+                
+                    <div class="preview-block hide" id="preview-block-3">
+                        <article class="tr-card tr-card-header-first">
+                            <div class="tr-card-banner">
+                                <img src="https://picsum.photos/id/211/600/400" alt="">
+                            </div>
+                            <div class="tr-card-header">
+                                <h2 class="title">Lorem Ipsum</h2>
+                                <h3 class="subtitle">lorem ipsum</h3>
+                            </div>
+                            <div class="tr-card-body">
+                                <p class="tr-card-text">
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore maxime incidunt corrupti quo pariatur aliquid debitis necessitatibus nisi reprehenderit
+                                </p>
+                            </div>
+                            <div class="tr-card-footer">
+                                <div class="tr-card-footer-links">
+                                    <a href ='#' class="cta">Link 1</a>
+                                    <a href ='#' class="cta">Link 2</a>
+                                </div>
+                                <div class="tr-card-footer-buttons">
+                                    <button class="far fa-heart"></button>
+                                    <button class="fas fa-share-alt"></button>
+                                    <button class="fas fa-ellipsis-v"></button>
+                                </div>
+                            </div>
+                            <span class="tr-card-badge">In Progress</span>
+                        </article>
+                    </div>
+
+                </div>
+
+                <div id="code-blocks" class="code-blocks tab hide">
+                    <button class="tr-btn tr-icon-btn copy-btn"><i class="fas fa-copy"></i></button>
+                    <div id="code-block-1" class="code-block">
+                    <pre><code>
+                        <article class="tr-card">
+                            <div class="tr-card-banner">
+                                <img src="https://picsum.photos/id/211/600/400" alt="">
+                            </div>
+                            <div class="tr-card-header">
+                                <h2 class="title">Lorem Ipsum</h2>
+                                <h3 class="subtitle">lorem ipsum</h3>
+                            </div>
+                            <div class="tr-card-body">
+                                <p class="tr-card-text">
+                                    Lorem ipsum dolor, sit amet consectetur a
+                                    dipisicing elit. Dolore maxime incidunt 
+                                    corrupti quo pariatur aliquid 
+                                    debitis necessitatibus nisi reprehenderit
+                                </p>
+                            </div>
+                            <div class="tr-card-footer">
+                                <div class="tr-card-footer-links">
+                                    <a href ='#' class="cta">Link 1</a>
+                                    <a href ='#' class="cta">Link 2</a>
+                                </div>
+                                <div class="tr-card-footer-buttons">
+                                    <button class="far fa-heart"></button>
+                                    <button class="fas fa-share-alt"></button>
+                                    <button class="fas fa-ellipsis-v"></button>
+                                </div>
+                            </div>
+                            <span class="tr-card-badge">In Progress</span>
+                        </article>
+                    </code></pre>
+                    </div>
+                    <div id="code-block-2" class="code-block hide">
+                        <pre>
+                            Hi there
+                                Satyam here
+                        </pre>
+                    </div>
+                    <div id="code-block-3" class="code-block hide">
+                        <pre>
+                            Hi there
+                                Shubham here
+                        </pre>
+                    </div>
+                </div>
+                
+
+                <!-- <article id='tr-dialog-alert' class="tr-dialog-wrapper">
+                    <div class="tr-dialog-box">
+                        <div class="tr-dialog-text">
+                            <h2 class="tr-dialog-heading">Dialog 1</h2>
+                            <p class="tr-dialog-subtext"> Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                        <div class="tr-dialog-buttons">
+                            <button class="tr-btn tr-btn-primary">Cancel</button>
+                            <button class="tr-btn tr-btn-primary">Accept</button>
+                        </div>
+                        <button class="tr-btn-transparent-bg tr-dialog-close-btn"><i class="fas fa-times"></i></button>
+                    </div>
+                </article>
+                
+                    
+                <article id='tr-dialog-simple' class="tr-dialog-wrapper hide tr-dialog-simple">
+                    <div class="tr-dialog-box">
+                        <div class="tr-dialog-text">
+                            <h2>Simple Dialog</h2>
+                        </div>
+                        <div class="tr-dialog-buttons stacked gap10">
+                            <button class="tr-btn tr-icon-label-btn tr-btn-transparent-bg"> <i class="fa fa-user"></i> Button 1</button>
+                            <button class="tr-btn tr-icon-label-btn tr-btn-transparent-bg"> <i class="fa fa-user"></i> Button 2</button>
+                            <button class="tr-btn tr-icon-label-btn tr-btn-transparent-bg"> <i class="fa fa-user"></i> Button 3</button>
+                        </div>
+                        <button class="tr-btn tr-btn-transparent-bg tr-dialog-close-btn"><i class="fas fa-times"></i></button>
+                    </div>
+                </article>
+                    
+                    
+                <article id='tr-dialog-confirmation' class="tr-dialog-wrapper hide tr-dialog-confirmation">
+                    <div class="tr-dialog-box">
+                        <div class="tr-dialog-text">
+                            <h2>Confirmation Dialog</h2>
+                        </div>
+                        <div class="tr-dialog-options">
+                                <label class="tr-btn tr-btn-transparent-bg" for="option1">
+                                    <input name="option" type="radio" id="option1">
+                                    Option 1
+                                </label>
+                                <label class="tr-btn tr-btn-transparent-bg" for="option2">
+                                        <input name="option" type="radio" id="option2">
+                                    Option 2
+                                </label>
+                                <label class="tr-btn tr-btn-transparent-bg" for="option3">
+                                        <input name="option" type="radio" id="option3">
+                                    Option 3
+                                </label>
+                                <label class="tr-btn tr-btn-transparent-bg" for="option4">
+                                        <input name="option" type="radio" id="option4">
+                                    Option 4
+                                </label>
+                        </div>
+                        <div class="tr-dialog-buttons">
+                            <button class="tr-btn tr-icon-label-btn tr-btn-transparent-bg"> <i class="fa fa-times"></i> Cancel</button>
+                            <button class="tr-btn tr-icon-label-btn tr-btn-transparent-bg"> <i class="fa fa-check"></i> Accept</button>
+                        </div>
+                        <button class="tr-btn tr-btn-transparent-bg tr-dialog-close-btn"><i class="fas fa-times"></i></button>
+                    </div>
+                </article> -->
+    
+            </div>
+
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script>
+        let codeBlocks = document.querySelectorAll("pre code");
+        codeBlocks.forEach((codeBlock) => {
+            let code = codeBlock.innerHTML;
+            code = code.replaceAll("<", "&LT");
+            codeBlock.innerHTML = code;
+        });
+        
+    </script>
+    <script src="script.js"></script>
+    <!-- <script src="./Dialogs/index.js"></script> -->
+    <script src="./drawer/index.js"></script>
+
+</body>
+</html>
