@@ -25,6 +25,7 @@ const AddToCart = ()=>{
         }
     ]
     const insertItemInCart = product =>{
+        
         setCartItems (curr => {
             let itemFound = false
             const newList = curr.map( item =>{
