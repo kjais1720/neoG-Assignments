@@ -31,11 +31,12 @@ export const AddressForm = ({ setAddresses, showForm }) => {
   const [isFormValid, setIsFormValid] = useState(false);
 
   useEffect(() => {
-    let tr = true;
+    let flag = true;
     Object.entries(isInputValid).forEach((i) => {
-      if (!i[1].isValid) tr = false;
+      console.log("value of i",i);
+      if (!i[1].isValid) flag = false;
     });
-    setIsFormValid(tr);
+    setIsFormValid(flag);
   }, [isInputValid]);
 
   useEffect(() => {

@@ -33,7 +33,7 @@ const AddToCart = ()=>{
                     itemFound = true;
                     return {...item,count:item.count+1};
                 }
-                else return {...item}
+                else return item
             })
             if(!itemFound) newList.push({...product, count:1});
             return newList;
