@@ -1,65 +1,94 @@
-const sortByPrice = (list, order) => {
-    let sortedList = [...list];
-    sortedList.sort((a, b) => Number(a.price) - Number(b.price));
-    switch (order) {
-      case "priceAsc":
-        return sortedList;
-      case "priceDesc":
-        return sortedList.reverse();
-      default:
-        return [...list];
-    }
-  };
-  
-  
-  const filterProducts = (list, filters) => {
-    let updatedList = list;
-    for(const filter in filters){
-      switch(filter){
-        case "includeOutOfStock":
-          updatedList = filters.includeOutOfStock ? updatedList : updatedList.filter(item=> item.inStock) ;
-          break;
-        case 'fastDelivery':
-          updatedList = filters.fastDelivery ? updatedList.filter(item => item.fastDelivery ) : updatedList;
-          break;
-        case 'priceLimit':
-          updatedList = updatedList.filter(item=> Number(item.price) <= Number(filters.priceLimit))
-          break;
-        default:
-          break;
-      }
-    }
-    return updatedList;
-  }
+export const findMaximumPrice = (productList) =>
+  Math.round(
+    productList.reduce(
+      (acc, curr) => (Number(curr.price) > acc ? Number(curr.price) : acc),
+      0
+    )
+  );
 
-  export const applyFilterAndSorts = (state) => {
-    const { originalList, sortBy, filters } = state;
-    let updatedList = sortByPrice(originalList,sortBy);
-
-    updatedList = filterProducts(updatedList, filters);
-    return updatedList;
+const sortByPrice = (list, { sortBy }) => {
+  let sortedList = [...list];
+  sortedList.sort((a, b) => Number(a.price) - Number(b.price));
+  switch (sortBy) {
+    case "priceAsc":
+      return sortedList;
+    case "priceDesc":
+      return sortedList.reverse();
+    default:
+      return [...list];
   }
-  
-  export const reducer = (state, action) => {
-    const { type, payload } = action;
-    const { filters } = state;
-    let newList;
-    switch (type) {
-      case "sortBy":
-        return { ...state, sortBy: payload };
-      case "filterBy":
-        return {...state, filters:{...filters,[payload.name]:payload.value}};
-      case 'resetFilter':
-        return { ...state,
-          sortBy:'',
-          filters:{
-            includeOutOfStock:true,
-            fastDelivery: false,
-            priceLimit: Infinity
-          } 
-        };
-      default:
-        return{...state};
-    }
-  };
-  
+};
+
+const filterOutOfStock = (list, { includeOutOfStock }) => {
+  let updatedList = [...list];
+  updatedList = includeOutOfStock
+    ? updatedList
+    : updatedList.filter((item) => item.inStock);
+  return updatedList;
+};
+
+const filterFastDelivery = (list, { fastDelivery }) => {
+  let updatedList = [...list];
+  updatedList = fastDelivery
+    ? updatedList.filter((item) => item.fastDelivery)
+    : updatedList;
+  return updatedList;
+};
+
+const filterByPrice = (list, { priceLimit }) => {
+  let updatedList = [...list];
+  updatedList = updatedList.filter(
+    (item) => Number(item.price) <= Number(priceLimit)
+  );
+  return updatedList;
+};
+
+const functionalChaining = (filterParams, ...functions) => (productsList) => {
+  return functions.reduce(
+    (accum, curr) => curr(accum, filterParams),
+    productsList
+  );
+};
+
+export const applyFilterAndSorts = (state) => {
+  const {
+    originalList,
+    sortBy,
+    includeOutOfStock,
+    fastDelivery,
+    priceLimit
+  } = state;
+  const composedFunctions = functionalChaining(
+    { sortBy, includeOutOfStock, fastDelivery, priceLimit },
+    sortByPrice,
+    filterOutOfStock,
+    filterFastDelivery,
+    filterByPrice
+  );
+
+  let updatedList = composedFunctions(originalList);
+  return updatedList;
+};
+
+export const reducer = (state, action) => {
+  const { type, payload } = action;
+  switch (type) {
+    case "sortBy":
+      return { ...state, sortBy: payload };
+    case "filterBy":
+      return {
+        ...state,
+        [payload.name]: payload.value
+      };
+    case "resetFilter":
+      return {
+        ...state,
+        sortBy: "",
+        includeOutOfStock: false,
+        fastDelivery: false,
+        priceLimit: findMaximumPrice(state.originalList)
+      };
+    default:
+      return { ...state };
+  }
+};

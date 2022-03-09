@@ -1,10 +1,10 @@
-import React, {useEffect} from "react";
+import React from "react";
 import { FilterBy } from "./components/filterBy";
 import { SortBy } from "./components/sortBy";
 import { useProduct } from "./product-context";
 
 export default function ProductsPage() {
-  const { finalProductsList, state, dispatch } = useProduct();
+  const { finalProductsList, dispatch } = useProduct();
 
   return (
     <>
@@ -12,8 +12,17 @@ export default function ProductsPage() {
         <form>
           <SortBy />
           <FilterBy />
-          <button onClick={()=>dispatch({type:"resetFilter", payload:""})} >Reset all Filters</button>
+          <button
+            style={{ margin: "5px auto", padding: "10px", borderColor: "red" }}
+            onClick={(e) => {
+              e.preventDefault();
+              dispatch({ type: "resetFilter", payload: "" });
+            }}
+          >
+            Reset all Filters
+          </button>
         </form>
+        <h2>Total Products : {finalProductsList.length}</h2>
         <div
           style={{
             display: "flex",
@@ -47,13 +56,13 @@ export default function ProductsPage() {
                 <img src={image} width="100%" height="auto" alt={productName} />
                 <h3> {name} </h3>
                 <div>Rs. {price}</div>
-                {inStock && <div> In Stock </div>}
-                {!inStock && <div style={{color:'red'}}> Out of Stock </div>}
+                {inStock && <div style={{ color: "green" }}> In Stock </div>}
+                {!inStock && <div style={{ color: "red" }}> Out of Stock </div>}
                 <div>{level}</div>
                 {fastDelivery ? (
-                  <div style={{color:"green"}}> Fast Delivery </div>
+                  <div style={{ color: "green" }}> Fast Delivery </div>
                 ) : (
-                  <div style={{color:"red"}}> 3 days minimum </div>
+                  <div style={{ color: "red" }}> 3 days minimum </div>
                 )}
               </div>
             )

@@ -1,7 +1,10 @@
 import { useProduct } from "../product-context";
 
 export const SortBy = () => {
-  const { state : {sortBy}, dispatch } = useProduct();
+  const {
+    state: { sortBy },
+    dispatch
+  } = useProduct();
   const changeHandler = (e) => {
     dispatch({ type: "sortBy", payload: e.target.value });
   };
@@ -13,7 +16,7 @@ export const SortBy = () => {
             <legend>Sort By:</legend>
             <label>
               <input
-                checked = {sortBy === 'priceAsc'}
+                checked={sortBy === "priceAsc"}
                 onChange={(e) => changeHandler(e)}
                 value="priceAsc"
                 type="radio"
@@ -25,7 +28,7 @@ export const SortBy = () => {
             <label>
               <input
                 onChange={(e) => changeHandler(e)}
-                checked = {sortBy === 'priceDesc'}
+                checked={sortBy === "priceDesc"}
                 value="priceDesc"
                 type="radio"
                 name="price"
